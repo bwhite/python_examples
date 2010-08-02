@@ -1,0 +1,1 @@
+SharedLibrary('libadd', ['add.c'])
