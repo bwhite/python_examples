@@ -10,7 +10,7 @@ lena_conv0 = np.real(np.fft.ifft2(filt_fft * lena_fft))
 lena_conv1 = np.array(lena)
 for i in range(1, lena.shape[0] - 1):
     for j in range(1, lena.shape[1] - 1):
-        lena_conv1[i, j] = lena[i, j+1] - lena[i, j-1]
+        lena_conv1[i, j] = -lena[i, j+1] + lena[i, j-1]
 mp.gray()
 mp.imshow(lena_conv0)
 mp.figure()
